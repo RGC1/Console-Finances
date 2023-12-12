@@ -139,3 +139,27 @@ console.log("Financial analysis:");
 
 let totalnMonths = finances.length;
 console.log("Total Months: ", totalnMonths); 
+
+//The net total amount of Profit/Losses over the entire period:
+
+
+
+
+
+// greatest increase:
+
+var greatestIncrease = {date: "", amount: 0};
+
+
+for (var i = 1; i < finances.length; i++) {
+  var increase = finances[i][1] - finances[i - 1][1];
+}
+
+if (increase > greatestIncrease.amount) {
+  greatestIncrease.date = finances[i],[0];
+  greatestIncrease.amount = increase;
+}
+
+console.log(`Greatest increase in Profits/Losses:, ${greatestIncrease.date}, $ ${greatestIncrease.amount}`);
+
+// greatest decrease:
