@@ -148,6 +148,9 @@ const totalProfits = finances.reduce(
 console.log("Total: ", totalProfits);
 
 
+//The average of the changes in Profit/Losses:
+
+
 // greatest increase:
 
 var greatestIncrease = {date: "", amount: 0};
@@ -157,7 +160,7 @@ for (var i = 1; i < finances.length; i++) {
   if (increase > greatestIncrease.amount) {
     greatestIncrease.date = finances[i],[0];
     greatestIncrease.amount = increase;
-}
+  }
 }
 
 console.log(`Greatest increase in Profits/Losses:, ${greatestIncrease.date}, $ ${greatestIncrease.amount}`);
@@ -168,11 +171,11 @@ var greatestDecrease = {date: "", amount: 0};
 
 
 for (var i = 1; i < finances.length; i++) {
-  var decrease = finances[i][1] - finances[i - 1][1];
+  var decrease = finances[i - 1][1] - finances[i][1];
   if (decrease > greatestDecrease.amount) {
     greatestDecrease.date = finances[i],[0];
     greatestDecrease.amount = decrease;
-}
+  }
 
 }
 
