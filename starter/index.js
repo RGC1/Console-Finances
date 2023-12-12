@@ -88,7 +88,7 @@ var finances = [
 ];
 
 
-
+//Pseudocode:
 
 // You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
 
@@ -133,4 +133,9 @@ var finances = [
      //previous data point
 
 
+console.log("Financial analysis:");
 
+//Total number of months:
+
+let totalnMonths = finances.length;
+console.log("Total Months: ", totalnMonths); 
