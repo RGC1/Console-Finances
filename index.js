@@ -150,6 +150,8 @@ console.log("Total: ", totalProfits);
 
 //The average of the changes in Profit/Losses:
 
+let totalChange = 0;
+const averageChange = totalChange / (totalnMonths - 1);
 
 // greatest increase:
 
