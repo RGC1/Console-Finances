@@ -154,11 +154,10 @@ var greatestIncrease = {date: "", amount: 0};
 
 for (var i = 1; i < finances.length; i++) {
   var increase = finances[i][1] - finances[i - 1][1];
+  if (increase > greatestIncrease.amount) {
+    greatestIncrease.date = finances[i],[0];
+    greatestIncrease.amount = increase;
 }
-
-if (increase > greatestIncrease.amount) {
-  greatestIncrease.date = finances[i],[0];
-  greatestIncrease.amount = increase;
 }
 
 console.log(`Greatest increase in Profits/Losses:, ${greatestIncrease.date}, $ ${greatestIncrease.amount}`);
@@ -170,11 +169,11 @@ var greatestDecrease = {date: "", amount: 0};
 
 for (var i = 1; i < finances.length; i++) {
   var decrease = finances[i][1] - finances[i - 1][1];
+  if (decrease > greatestDecrease.amount) {
+    greatestDecrease.date = finances[i],[0];
+    greatestDecrease.amount = decrease;
 }
 
-if (decrease > greatestDecrease.amount) {
-  greatestDecrease.date = finances[i],[0];
-  greatestDecrease.amount = decrease;
 }
 
 console.log(`Greatest decrease in Profits/Losses:, ${greatestDecrease.date}, $ ${greatestDecrease.amount}`);
