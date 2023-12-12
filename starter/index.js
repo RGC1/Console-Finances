@@ -140,16 +140,17 @@ console.log("Financial analysis:");
 let totalnMonths = finances.length;
 console.log("Total Months: ", totalnMonths); 
 
-//The net total amount of Profit/Losses over the entire period:
+//The net total amount of Profit/Losses over the entire period using reduce method:
 
+const totalProfits = finances.reduce(
+  (total, amount) => total + amount);
 
-
+console.log("Total: ", totalProfits);
 
 
 // greatest increase:
 
 var greatestIncrease = {date: "", amount: 0};
-
 
 for (var i = 1; i < finances.length; i++) {
   var increase = finances[i][1] - finances[i - 1][1];
