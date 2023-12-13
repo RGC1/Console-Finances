@@ -152,6 +152,7 @@ console.log("Total: ", totalProfits);
 
 let totalChange = 0;
 const averageChange = totalChange / (totalnMonths - 1);
+console.log(averageChange);
 
 // greatest increase:
 
